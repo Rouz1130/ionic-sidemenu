@@ -4,24 +4,31 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonMaterialSidemenu } from '../components/ion-material-sidemenu';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { Page1 } from '../pages/page1/page1';
+
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    Page1,
     IonMaterialSidemenu,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+     MatCheckboxModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    Page1
   ],
   providers: [
     StatusBar,
